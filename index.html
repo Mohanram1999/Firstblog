@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="style.css" type="text/css" rel="stylesheet"> 
+        <script src="script.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <!--HEADER SECTION -->
+
+        <header>
+            <!--LOGO SECTION-->
+            <div class="logo" id="logo">
+                MR
+            </div>
+            <!--LOGO SECTION-->
+            <!--MENU SECTION-->
+            <div class="menu" id="menu" onclick="menu()">
+                <div class="menubar" id="menubar">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+            </div>
+            <script>
+                function menu(){
+                    var x = document.getElementById("navbar");
+                    if (x.style.display === "block"){
+                        x.style.display = "none";
+                    }
+                    else{
+                        x.style.display = "block";
+                    }
+                }
+            </script>
+            <!--NAV SECTION-->
+            <nav id="navbar">
+                <ul>
+                    <li class="home" ><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#skill">SKILL</a></li>
+                    <li><a href="#project">PROJECT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <!--NAV SECTION-->
+        </header>
+         <!--HEADER SECTION -->
+
+         <!--home section-->
+         <section class="homecon" id="home">
+             <div class="homecontent">
+                <h1>WELCOME</h1>
+                <h2>I AM M<span class="chakra">O</span>HANRAM</h2>
+                <h3>I am an <span id="span"></span></h3>
+                <script>
+                    const words = ["ENGINEER.","DESIGNER.","DANCER.","WRITER."];
+                    let i = 0;
+                    let timer;
+                    function typingeffect(){
+                        let word = words[i].split("");
+                        var looptyping = function(){
+                            if (word.length > 0){
+                                document.getElementById('span').innerHTML += word.shift();
+                            }
+                            else{
+                                deletingEffect();
+                                return false;
+                            };
+                            timer = setTimeout(looptyping,200);
+                        };
+                        looptyping();
+                    };
+                    function deletingEffect(){
+                        let word = words[i].split("");
+                        var loopDeleting = function(){
+                            if (word.length > 0){
+                                word.pop();
+                                document.getElementById('span').innerHTML = word.join("");
+                            }
+                            else{
+                                if(words.length > (i + 1)){
+                                i++;
+                            }
+                            else{
+                            i = 0;
+                        };
+                        typingeffect();
+                        return false;
+                        };
+                        timer = setTimeout(loopDeleting,200);
+                        };
+                        loopDeleting();
+                    };
+                    typingeffect();
+                </script>
+             </div>
+         </section>
+         <!--HOME SECTION ENDS-->
+
+         <!--ABOUT SECTION-->
+         <section class="aboutcon" id="about">
+             <div class="aboutcontent">
+                 <h1>ABOUT ME</h1>
+                 <h2>Hi there;</h2>
+                 <p>I am mohan.Completed my final year exam and waiting for my result,graduate engineer soon.I enjoy my days with learning something new.I like dancing,writing stories by using imagination and programming.I am seeking for the opportunities to learn and implement knowledge.</p>
+                 <h2>Education qualification:</h2>
+                 <ul>
+                     <li>Completed my 10th in M.I.H.M.Hr.sec school with 95 percentage out of 100.</li>
+                     <li>Completed my 12th Sishya school with 89 percentage out of 100.</li>
+                     <li>Will Complete my Degree in University college of engineering,Kanchipuram with 7.5 CGPA out of 10.</li>
+                 </ul>
+             </div>
+         </section>
+         <!--ABOUT SECTION-->
+
+         <!--SKILL SECTION-->
+         <section class="skillcon" id="skill">
+             <div class="skillcontent">
+                 <h1>SKILLS</h1>
+                 <div class="skills">
+                    <ul>
+                        <li><div class="container">
+                            <img src="matlab logo.png" alt="image is here">
+                            <div class="overlay">
+                                <div class="text">60%</div>
+                            </div>
+                            </div>
+                            <br>MATLAB</li>
+                        <li><div class="container">
+                            <img src="proteus.png" alt="image is here">
+                            <div class="overlay">
+                                <div class="text">60%</div>
+                            </div>
+                            </div><br>PROTEUS</li>
+                        <li><div class="container">
+                            <img src="html.png" alt="image is here">
+                            <div class="overlay">
+                                <div class="text">70%</div>
+                            </div>
+                            </div>
+                            <br>HTML</li>
+                        <li><div class="container">
+                            <img src="css.png" alt="image is here">
+                            <div class="overlay">
+                                <div class="text">70%</div>
+                            </div>
+                            </div><br>CSS</li>
+                        <li><div class="container">
+                            <img src="javascript.png" alt="image is here">
+                            <div class="overlay">
+                                <div class="text">50%</div>
+                            </div>
+                            </div><br>Javascript</li>
+                        <li><div class="container">
+                            <img src="python.png" alt="image is here">
+                            <div class="overlay">
+                                <div class="text">70%</div>
+                            </div>
+                            </div><br>PYTHON</li>
+                    </ul>
+                 </div>
+             </div>
+         </section>
+         <!--SKILL SECTION-->
+
+         <!--PROJECT SECTION-->
+         <section class="projectcon" id="project">
+             <div class="projectcontent">
+                 <h1>PROJECT</h1>
+                 <h3>MINI PROJECT</h3>
+                 <ul>
+                     <li>"FUZZY-PSO controller design for MPPT in PV system” in MATLAB"</li>
+                 </ul>
+                 <h3>MAIN PROJECT</h3>
+                 <ul>
+                     <li>"Solar MPPT charge controller ” (using sensors V and I values are monitored in LCD display and mobile by IOT)"</li>
+                </ul>
+                 <h3>PERSONAL PROJECT</h3>
+                 <ul>
+                     <li>“Cutoff calculator for 12th biology students using Html, CSS and JS”</li>
+                 </ul>
+             </div>
+         </section>
+         <!--PROJECT SECTION-->
+
+         <!--CONTACT SECTION-->
+         <section class="contactcon" id="contact">
+             <div class="contactcontent">
+                 <h1>Contact info</h1>
+                 <h3>MAIL ID</h3>
+                 <p>mohanram1728@gmail.com</p>
+                 <h3>PHONE NUMBER</h3>
+                 <p>9843458808</p>
+             </div>
+         </section>
+
+    </body>
+</html>
