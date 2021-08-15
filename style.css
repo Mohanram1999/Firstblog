@@ -7,6 +7,8 @@
 /*header and body section*/
 body{
     background-color: rgb(26, 25, 25);
+    background-image: url("wallpaper detective.jpg");
+    background-blend-mode:saturation;
 }
 header{
     margin: 10px;
